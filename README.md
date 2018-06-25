@@ -1,2 +1,3 @@
 # WasteBucks
-Hogeschool Rotterdam school project
+Hogeschool Rotterdam
+0882284
