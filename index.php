@@ -1,4 +1,4 @@
-<?php ?>
+<?php include('server.php') ?>
 
 <!DOCTYPE html>
 <html>
@@ -34,20 +34,21 @@
   <main class="mdl-layout__content">
     <div class="page-content center-card">
 	<div class="demo-card-square mdl-card mdl-shadow--2dp card-padding">
-	<form action="#">
+	<form method="post" action="index.php">
+    <?php include('errors.php') ?>
 		<h4 class="center-text">Login</h4>
 		  <div class="mdl-textfield mdl-js-textfield">
-		    <input class="mdl-textfield__input" type="text">
-		    <label class="mdl-textfield__label" for="sample1">Gebruikersnaam</label>
+		    <input name="username" class="mdl-textfield__input" type="text">
+		    <label class="mdl-textfield__label" for="sample1">Email</label>
 		  </div>
 		  <div class="mdl-textfield mdl-js-textfield">
-		    <input class="mdl-textfield__input" type="password">
+		    <input class="mdl-textfield__input" type="password" name="password">
 		    <label class="mdl-textfield__label" for="sample1">Wachtwoord</label>
 		  </div>
-	</form>
-	<a href="dashboard.php"<button class="btn-width mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+	<button type="submit" name="login_user" class="btn-width mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
 	  Inloggen
-	</button></a>
+	</button>
+  </form>
 	<a href="register.php"><p>Nog geen account? Registreer hier!</p></a>	
 	</div>
     </div>

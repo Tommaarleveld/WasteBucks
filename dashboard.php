@@ -1,4 +1,16 @@
-<?php ?>
+<?php 
+  session_start(); 
+
+  if (!isset($_SESSION['username'])) {
+    $_SESSION['msg'] = "You must log in first";
+    header('location: index.php');
+  }
+  if (isset($_GET['logout'])) {
+    session_destroy();
+    unset($_SESSION['username']);
+    header("location: index.php");
+  }
+?>
 
 <!DOCTYPE html>
 <html>
@@ -28,6 +40,9 @@
   <!-- Page content -->
   <main class="mdl-layout__content">
     <div class="mdl-grid cyan-bg-element">
+    <?php if (isset($_SESSION['success'])) : 
+            echo $_SESSION['success']; 
+            unset($_SESSION['success']); endif ?>
     <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone"><span class="item-title center-text">Balance</span></div>
     <div class="mdl-cell mdl-cell--2-col mdl-cell--1-col-phone mdl-cell--1-offset-phone"><img src="images/WasteBucksLogo.png"></div>
     <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-phone"><p id="wb-ammount">1200</p></div>

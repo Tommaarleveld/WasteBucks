@@ -1,4 +1,4 @@
-<?php ?>
+<?php include('server.php') ?>
 
 <!DOCTYPE html>
 <html>
@@ -34,28 +34,29 @@
   <main class="mdl-layout__content">
     <div class="page-content center-card">
 	<div class="demo-card-square mdl-card mdl-shadow--2dp card-padding">
-	<form action="#">
+	<form method="post" action="register.php">
+    <?php include('errors.php'); ?>
 		<h4 class="center-text">Registreren</h4>
 		  <div class="mdl-textfield mdl-js-textfield">
-		    <input class="mdl-textfield__input" type="text">
-		    <label class="mdl-textfield__label" for="sample1">Gebruikersnaam</label>
+		    <input name="username" class="mdl-textfield__input" type="text" value="<?php echo $username; ?>">
+		    <label class="mdl-textfield__label" for="sample1">Voor- en achternaam</label>
 		  </div>
 		  <div class="mdl-textfield mdl-js-textfield">
-		    <input class="mdl-textfield__input" type="Email">
+		    <input name="email" class="mdl-textfield__input" type="Email" value="<?php echo $email; ?>">
 		    <label class="mdl-textfield__label" for="sample1">Email</label>
 		  </div>
       <div class="mdl-textfield mdl-js-textfield">
-        <input class="mdl-textfield__input" type="password">
+        <input class="mdl-textfield__input" type="password" name="password_1">
         <label class="mdl-textfield__label" for="sample1">Vul een wachtwoord in</label>
       </div>
       <div class="mdl-textfield mdl-js-textfield">
-        <input class="mdl-textfield__input" type="password">
+        <input class="mdl-textfield__input" type="password" name="password_2">
         <label class="mdl-textfield__label" for="sample1">Vul uw wachtwoord opnieuw in</label>
       </div>
-	</form>
-	<a href="index.php"><button class="btn-width mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-	  Registreren
-	</button></a>
+      <button type="submit" name="reg_user" class="btn-width mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+	     Registreren
+	    </button>
+  </form>
 	<a href="index.php"><p>Heeft u al een account? Log hier in!</p></a>	
 	</div>
     </div>
