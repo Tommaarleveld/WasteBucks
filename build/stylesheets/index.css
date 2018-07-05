@@ -284,4 +284,8 @@ i.material-icons.white {
   color: white;
 }
 
+.error {
+  color: red;
+}
+
 /*# sourceMappingURL=build/stylesheets/index.css.map */
