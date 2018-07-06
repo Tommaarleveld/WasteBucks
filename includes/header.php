@@ -6,7 +6,7 @@
     <span class="mdl-layout-title">WasteBucks</span>
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="dashboard.php">Dashboard</a>
-      <a class="mdl-navigation__link" href="#">Goede doel</a>
+      <a class="mdl-navigation__link" href="charity.php">Goede doel</a>
       <a class="mdl-navigation__link" href="taxlevel.php">Afvalstoffenheffing</a>
       <a class="mdl-navigation__link" href="wasteshop.php">WasteShop</a>
       <a class="mdl-navigation__link" href="leaderboard.php">Leaderboards</a>

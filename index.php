@@ -34,12 +34,15 @@
   <main class="mdl-layout__content">
     <div class="page-content center-card">
 	<div class="demo-card-square mdl-card mdl-shadow--2dp card-padding">
+     <?php if (isset($_SESSION['success'])) : 
+            echo $_SESSION['success']; 
+            unset($_SESSION['success']); endif ?>
 	<form method="post" action="index.php">
     <?php include('errors.php') ?>
 		<h4 class="center-text">Login</h4>
 		  <div class="mdl-textfield mdl-js-textfield">
 		    <input name="username" class="mdl-textfield__input" type="text">
-		    <label class="mdl-textfield__label" for="sample1">Email</label>
+		    <label class="mdl-textfield__label" for="sample1">Voor- en achternaam</label>
 		  </div>
 		  <div class="mdl-textfield mdl-js-textfield">
 		    <input class="mdl-textfield__input" type="password" name="password">

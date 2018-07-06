@@ -289,7 +289,7 @@
                   <p class="name-highlight close-text">#8</p>
                 </div>
                 <div class="mdl-cell mdl-cell--2-col mdl-cell--4-col-phone">
-                   <p class="close-text">333</p>
+                   <p class="close-text">323</p>
                 </div>
               </div>
             </div>
